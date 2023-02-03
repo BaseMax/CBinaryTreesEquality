@@ -12,12 +12,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct node
-{
-    int data;
-    struct node *left;
-    struct node *right;
-};
+#include "BinaryTreesEquality.h"
 
 /**
  * @brief Create a new node object
@@ -58,5 +53,30 @@ int areIdentical(struct node *a, struct node *b)
     }
 
     // One of them is empty and the other is not
+    return 0;
+}
+
+int main(int argc, char** argv)
+{
+    // Let us create trees
+    // 1st tree
+    struct node *root1 = newNode(1);
+    root1->left = newNode(2);
+    root1->right = newNode(3);
+    root1->left->left = newNode(4);
+    root1->left->right = newNode(5);
+
+    // 2nd tree
+    struct node *root2 = newNode(1);
+    root2->left = newNode(2);
+    root2->right = newNode(3);
+    root2->left->left = newNode(4);
+    root2->left->right = newNode(5);
+
+    if (areIdentical(root1, root2))
+        printf("Both trees are identical");
+    else
+        printf("Trees are not identical");
+
     return 0;
 }
