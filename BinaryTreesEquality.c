@@ -2,7 +2,7 @@
  * 
  * @file BinaryTreesEquality.c
  * @author Max Base (maxbasecode@gmail.com)
- * @brief A C program to check if two binary trees are identical or not.
+ * @brief A C program to check if two binary trees are identical or not. (Easily check equality of two binary trees)
  * @version 0.1
  * @date 2023-02-03
  * @copyright Copyright (c) 2023
