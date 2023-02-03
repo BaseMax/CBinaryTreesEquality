@@ -11,4 +11,27 @@ $ gcc BinaryTreesEquality.c -o BinaryTreesEquality
 $ ./BinaryTreesEquality
 ```
 
+## Example
+
+```c
+// 1st tree
+struct node *root1 = newNode(1);
+root1->left = newNode(2);
+root1->right = newNode(3);
+root1->left->left = newNode(4);
+root1->left->right = newNode(5);
+
+// 2nd tree
+struct node *root2 = newNode(1);
+root2->left = newNode(2);
+root2->right = newNode(3);
+root2->left->left = newNode(4);
+root2->left->right = newNode(5);
+
+if (areIdentical(root1, root2))
+    printf("Both trees are identical");
+else
+    printf("Trees are not identical");
+```
+
 Copyright (c) 2023, Max Base
